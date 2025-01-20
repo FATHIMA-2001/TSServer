@@ -1,6 +1,6 @@
 const jsonServer = require('json-server')
 
-const MPServer = jsonServer.create()
+const TSServer = jsonServer.create()
 
 const middleware =jsonServer.defaults()
 
@@ -9,10 +9,10 @@ const PORT = 3000
 const route = jsonServer.router('db.json')
 
 
-MPServer.use(middleware)
+TSServer.use(middleware)
 
-MPServer.use(route)
+TSServer.use(route)
 
-MPServer.listen(PORT,()=>{
-console.log(`MPServer started at port ${PORT}`);
+TSServer.listen(PORT,()=>{
+console.log(`TSServer started at port ${PORT}`);
 })
